@@ -245,12 +245,12 @@ function switchTab(clickedTab) {
       abcNews.classList.add("selected-channel");
       playChannel(0);
     } else if (clickedTab === usertab) {
-      playChannel(-1);
+     // playChannel(-1);
       livetvWindow.classList.remove("active");
       mainWindow.classList.add("activeflex");
       getcurrLoc();
     } else if (clickedTab === searchTab) {
-      playChannel(-1);
+     // playChannel(-1);
       livetvWindow.classList.remove("active");
       mainWindow.classList.add("activeflex");
       setallNull();
@@ -344,7 +344,7 @@ function getdate() {
 }
 
 //livetv
-function removeselectedChannel() {
+/*function removeselectedChannel() {
   abcNews.classList.remove("selected-channel");
   foxnews.classList.remove("selected-channel");
   aajtakNews.classList.remove("selected-channel");
@@ -372,9 +372,9 @@ function playChannel(index) {
   } else {
     alert("no");
   }
-}
+}*/
 /*event listners*/
-
+/*
 abcNews.addEventListener("click", () => {
   removeselectedChannel();
   abcNews.classList.add("selected-channel");
@@ -405,7 +405,7 @@ news24News.addEventListener("click", () => {
   news24News.classList.add("selected-channel");
   playChannel(5);
 });
-
+*/
 toggleBtn.addEventListener("click", () => {
   console.log("hi");
   updateUnit(unit);
