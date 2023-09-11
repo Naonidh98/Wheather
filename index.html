@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wheather 2.0</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!--
+      <video autoplay loop class="bg-video" muted>
+        <source src="https://i.vimeocdn.com/video/804943660-dddc48c62491ed788ffba3b510243925949e05cf222b2a49cd5caa5b93bbb673-d?mw=1300&mh=731&q=70" />
+      </video>-->
+      <img src="https://i.vimeocdn.com/video/804943660-dddc48c62491ed788ffba3b510243925949e05cf222b2a49cd5caa5b93bbb673-d?mw=1300&mh=731&q=70" alt="" class="bg-video">
+      <!--<div class="overlay"></div>-->
+      <div class="container">
+        <nav class="navbar flex">
+
+          <form action="" class="search-form">
+            <input
+              type="text"
+              id="search-tab"
+              placeholder="Search for a city or location...."
+            />
+            <button class="search-btn flex">
+              <img
+                src="./assets/585e4ad1cb11b227491c3391.png"
+                alt=""
+                height="22px"
+                width="22px"
+              />
+            </button>
+          </form>
+
+          <img
+          src="./assets/userlogo-removebg-preview.png"
+          alt=""
+          height="25px"
+          width="25px"
+          class="user-logo"
+        />
+
+          <div class="tv-icon flex  ">
+            <i class="fa-solid fa-tv"></i>
+          </div>
+          <div class="bell ">
+            <i
+              class="fa-solid fa-bell fa-shake"
+              style="color: #ededed; font-size: 20px; cursor: pointer"
+            ></i>
+          </div>
+        </nav>
+        <div class="main flex">
+          <div class="box-1 flex">
+            <div class="content-1">
+              <div class="content-1-txt">
+                <div class="top-cont">
+                  <p class="country-name"></p>
+                  <h1 class="temprature unittemp"></h1>
+                  <p class="wheather-status"></p>
+                  <p class="time-container">
+                    <span class="date day"></span> |
+                    <span class="time"></span>
+                  </p>
+                  <img
+                    src="./assets/testimage.webp"
+                    alt=""
+                    class="wheather-img"
+                  />
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="bottom-content">
+                  <div class="Wind-speed flex">
+                    <p class="flex">
+                      <i class="fa-solid fa-wind" style="color: #d9d9d9"></i>
+                      Wind Speed
+                    </p>
+                    <p class="wind"></p>
+                  </div>
+                  <div class="Wind-speed flex">
+                    <p class="flex">
+                      <i class="fa-solid fa-droplet" style="color: #c9c9c9"></i>
+                      Humidity
+                    </p>
+                    <p><span class="humidity"></span></p>
+                  </div>
+                  <div class="Wind-speed flex">
+                    <p class="flex">
+                      <i class="fa-solid fa-cloud" style="color: #dbdbdb"></i>
+                      Air quality
+                    </p>
+                    <p class="air"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="loader"></div>
+              <div class="grant-acess flex">
+                <img src="./assets/location-img-removebg-preview.png" alt="" height="180px" width="180px">
+                <h3 class="allowtxt">Allow your current Location</h3>
+                <button class="primary-btn">Grant Acess</button>
+              </div>
+            </div>
+            <div class="content-2">
+              <h2>Today</h2>
+              <div class="time-box">
+                <div class="box flex" id="time-box1">
+                  <i class="fa-solid fa-moon" style="color: #b1d016"></i>
+                  <div class="temp temp2 unittemp"></div>
+                  <div class="time time2"></div>
+                </div>
+                <div class="box flex" id="time-box2">
+                  <i class="fa-solid fa-moon" style="color: #b1d016"></i>
+                  <div class="temp temp2 unittemp"></div>
+                  <div class="time time2"></div>
+                </div>
+                <div class="box flex" id="time-box3">
+                  <i class="fa-solid fa-moon" style="color: #b1d016"></i>
+                  <div class="temp temp2 unittemp"></div>
+                  <div class="time time2"></div>
+                </div>
+                <div class="box flex" id="time-box4">
+                  <i class="fa-solid fa-moon" style="color: #b1d016"></i>
+                  <div class="temp temp2 unittemp"></div>
+                  <div class="time time2"></div>
+                </div>
+                <div class="box flex" id="time-box5">
+                  <i class="fa-solid fa-moon" style="color: #b1d016"></i>
+                  <div class="temp temp2 unittemp"></div>
+                  <div class="time time2"></div>
+                </div>
+                <div class="box flex" id="time-box6">
+                  <i class="fa-solid fa-moon" style="color: #b1d016"></i>
+                  <div class="temp temp2 unittemp"></div>
+                  <div class="time time2"></div>
+                </div>
+                <div class="loader"></div>
+              </div>
+            </div>
+          </div>
+          <div class="box-2">
+            <div class="container-3">
+              <h1 class="forcast">
+                7 Day Forcast<input type="checkbox" name="" id="check" />
+                <label for="check" class="toggle"> </label>
+              </h1>
+
+              <div class="weekly-forcast">
+                <div class="week-day flex">
+                  <img
+                    src="./assets/testimage.webp"
+                    alt="img"
+                    width="55px"
+                    height="55px"
+                  />
+                  <p class="temp weektemp unittemp"></p>
+                  <p class="desc weekdesc"></p>
+                  <p class="day">Mon</p>
+                </div>
+                <div class="week-day flex">
+                  <img
+                    src="./assets/testimage.webp"
+                    alt="img"
+                    width="55px"
+                    height="55px"
+                  />
+                  <p class="temp weektemp unittemp"></p>
+                  <p class="desc weekdesc"></p>
+                  <p class="day">Tue</p>
+                </div>
+                <div class="week-day flex">
+                  <img
+                    src="./assets/testimage.webp"
+                    alt="img"
+                    width="55px"
+                    height="55px"
+                  />
+                  <p class="temp weektemp unittemp"></p>
+                  <p class="desc weekdesc"></p>
+                  <p class="day">Wed</p>
+                </div>
+                <div class="week-day flex">
+                  <img
+                    src="./assets/testimage.webp"
+                    alt="img"
+                    width="55px"
+                    height="55px"
+                  />
+                  <p class="temp weektemp unittemp"></p>
+                  <p class="desc weekdesc"></p>
+                  <p class="day">Thu</p>
+                </div>
+                <div class="week-day flex">
+                  <img
+                    src="./assets/testimage.webp"
+                    alt="img"
+                    width="55px"
+                    height="55px"
+                  />
+                  <p class="temp weektemp unittemp"></p>
+                  <p class="desc weekdesc"></p>
+                  <p class="day">Fri</p>
+                </div>
+                <div class="week-day flex">
+                  <img
+                    src="./assets/testimage.webp"
+                    alt="img"
+                    width="55px"
+                    height="55px"
+                  />
+                  <p class="temp weektemp unittemp"></p>
+                  <p class="desc weekdesc"></p>
+                  <p class="day">Sat</p>
+                </div>
+                <div class="week-day flex">
+                  <img
+                    src="./assets/testimage.webp"
+                    alt="img"
+                    width="55px"
+                    height="55px"
+                  />
+                  <p class="temp weektemp unittemp"></p>
+                  <p class="desc weekdesc"></p>
+                  <p class="day">Sun</p>
+                </div>
+              </div>
+              <div class="loader"></div>
+            </div>
+            <div class="container-4">
+              <h2 class="flex rain-top">
+                Rain Chances
+                <img
+                  src="./assets/rain.png"
+                  alt=""
+                  height="50px"
+                  width="50px"
+                  class="rainimg"
+                />
+                <div class="loader"></div>
+              </h2>
+
+              <div class="flex rain"></div>
+            </div>
+          </div>
+          <div class="box-3">
+            <div class="container-5">
+              <h2>Wheather Around The World</h2>
+              <div class="">
+                <div class="wheather-box flex" id="india">
+                  <p>India</p>
+                  <h3>Delhi</h3>
+                  <p>Rainy</p>
+                  <span class="temp ind unittemp" id="country-temp"></span>
+                </div>
+                <div class="">
+                  <div class="wheather-box flex" id="usa">
+                    <p>United states</p>
+                    <h3>California</h3>
+                    <p>Rainy</p>
+                    <span class="temp us unittemp" id="country-temp"></span>
+                  </div>
+                  <div class="">
+                    <div class="wheather-box flex" id="china">
+                      <p>China</p>
+                      <h3>Beijing</h3>
+                      <p>Rainy</p>
+                      <span class="temp ch unittemp" id="country-temp"></span>
+                    </div>
+                    <div class="">
+                      <div class="wheather-box flex" id="japan">
+                        <p>Japan</p>
+                        <h3>Tokyo</h3>
+                        <p>Rainy</p>
+                        <span
+                          class="temp jap unittemp"
+                          id="country-temp"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="livetv">
+          <div class="livetv-container">
+            <video
+              id="video"
+              width="560"
+              height="315"
+              controls
+              autoplay="autoplay"
+              unmuted
+            ></video>
+          </div>
+
+          <div class="channel-container flex">
+            <img src="./assets/abc.jpg" alt="" id="abc" />
+            <img src="./assets/fox.png" alt="" id="fox" />
+
+            <img src="./assets/primenews.jpg" alt="" id="primenews" />
+            <img src="./assets/aaj tak.png" alt="" id="aajtak" />
+            <img src="./assets/cnn.png" alt="" id="cnn" />
+            <img src="./assets/news24.png" alt="" id="news24" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/23959def9a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="http://hlsbook.net/wp-content/examples/hls.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
